@@ -72,13 +72,13 @@ class _MyHomePageState extends State<MyHomePage> {
     }
 
 // ...
-    return LayoutBuilder(builder: (context, Constraints) {
+    return LayoutBuilder(builder: (context, constraints) {
       return Scaffold(
         body: Row(
           children: [
             SafeArea(
               child: NavigationRail(
-                extended: Constraints.maxWidth >= 600,
+                extended: constraints.maxWidth >= 600,
                 destinations: [
                   NavigationRailDestination(
                     icon: Icon(Icons.home),
