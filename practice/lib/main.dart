@@ -33,22 +33,22 @@ class MyApp extends StatelessWidget {
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Text(
+                        const Text(
                           "Welcome to iSpark",
-                          style: const TextStyle(
+                          style: TextStyle(
                             color: Colors.white,
                             fontWeight: FontWeight.bold,
                             fontSize: 24,
                           ),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 15,
                         ),
                         ElevatedButton(
                           onPressed: () {
                             print("Button Pressed");
                           },
-                          child: Text("Learn More"),
+                          child: const Text("Learn More"),
                         )
                       ],
                     ),
