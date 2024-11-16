@@ -20,39 +20,50 @@ class MyApp extends StatelessWidget {
         body: Column(
           children: [
             Center(
-              child: Container(
-                  height: MediaQuery.of(context).size.height * 0.4,
-                  width: MediaQuery.of(context).size.width,
-                  decoration: const BoxDecoration(
-                      image: DecorationImage(
-                          image: AssetImage('assets/container_background.jpg'),
-                          fit: BoxFit.cover,
-                          opacity: 0.95)),
-                  // ignore: prefer_const_constructors
-                  child: Center(
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        const Text(
-                          "Welcome to iSpark",
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontWeight: FontWeight.bold,
-                            fontSize: 24,
-                          ),
+              child: Column(
+                children: [
+                  Container(
+                      height: MediaQuery.of(context).size.height * 0.35,
+                      width: MediaQuery.of(context).size.width,
+                      decoration: const BoxDecoration(
+                          image: DecorationImage(
+                              image:
+                                  AssetImage('assets/container_background.jpg'),
+                              fit: BoxFit.cover,
+                              opacity: 0.95)),
+                      // ignore: prefer_const_constructors
+                      child: Center(
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            const Text(
+                              "Welcome to iSpark",
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontWeight: FontWeight.bold,
+                                fontSize: 24,
+                              ),
+                            ),
+                            const SizedBox(
+                              height: 15,
+                            ),
+                            ElevatedButton(
+                              onPressed: () {
+                                print("Button Pressed");
+                              },
+                              child: const Text("Learn More"),
+                            )
+                          ],
                         ),
-                        const SizedBox(
-                          height: 15,
-                        ),
-                        ElevatedButton(
-                          onPressed: () {
-                            print("Button Pressed");
-                          },
-                          child: const Text("Learn More"),
-                        )
-                      ],
-                    ),
-                  )),
+                      )),
+                  ListView(
+                    scrollDirection: Axis.vertical,
+                    children: const [
+                      Text("This is a flutter project and my is rajveer goud")
+                    ],
+                  )
+                ],
+              ),
             ),
           ],
         ),
